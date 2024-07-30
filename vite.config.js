@@ -8,12 +8,12 @@ export default defineConfig({
   plugins: [
     ViteMinifyPlugin({}),
     ViteImageOptimizer({
-      include: ['**/*.png', '**/*.jpg', '**/*.jpeg']
+      include: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
     }),
     copy({
       targets: [{ src: 'src/assets/images/*.svg', dest: 'docs/assets' }],
-      hook: 'writeBundle' // Aseguramos que los archivos se copien después de que el bundle se haya generado
-    })
+      hook: 'writeBundle', // Aseguramos que los archivos se copien después de que el bundle se haya generado
+    }),
   ],
   base: '',
   root: 'src',
@@ -21,11 +21,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        about: resolve(__dirname, 'src/html/about.html'),
-        contact: resolve(__dirname, 'src/html/contact.html')
+        game1: resolve(__dirname, 'src/html/game1.html'),
+        game2: resolve(__dirname, 'src/html/game2.html'),
+        game3: resolve(__dirname, 'src/html/game3.html'),
         // Añade aquí el resto de páginas que quieras.(nombre único: resolve(__dirname, 'src/html/archivo.html'))
-      }
+      },
     },
-    outDir: '../docs'
-  }
+    outDir: '../docs',
+  },
 });

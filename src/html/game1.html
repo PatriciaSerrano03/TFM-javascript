@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- PON UN FAVICON!!! -->
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lilita+One&display=swap" rel="stylesheet">
+  <!-- Titulo -->
+    <title>FlashFun - Simon Game</title>
+  </head>
+  <body class="game1">
+    <div id="outer-circle" class="outer__circle">
+      <div id="topleft" class="topleft"></div>
+      <div id="topright" class="topright"></div>
+      <div id="bottomleft" class="bottomleft"></div>
+      <div id="bottomright" class="bottomright"></div>
+
+      <div id="inner-circle" class="inner__circle">
+        <div id="title" class="title">SIMON!</div>
+        <div id="switches" class="switches">
+          <input type="checkbox" class="button2" id="on">
+          <button class="button" id="start">Start</button>
+          <input type="checkbox" class="button2" id="strict">
+        </div>
+        <div class="text__buttons">
+          <span>POWER</span>
+          <span>STRICT</span>
+        </div>
+        <div id="turn" class="turn"></div>
+        <div class="text__count">
+          COUNT
+        </div>
+      </div>
+
+    </div>
+
+    <!-- OBLIGATORIO PONER EL ACCESO AL SCRIPT -->
+    <script type="module" src="../js/index.js"></script>
+  </body>
+</html>
